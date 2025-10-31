@@ -41,19 +41,6 @@ const Header = ({ user, setUser }) => {
       </div>
 
       <div className="header-right">
-        <div className="lang-dropdown">
-          <button className="lang-btn" onClick={toggleLang}>
-            <FaGlobe className="lang-icon" />
-            {selectedLang} <span className="dropdown-arrow">▾</span>
-          </button>
-          {langOpen && (
-            <ul className="lang-menu">
-              <li onClick={() => selectLang("EN")}>English</li>
-              <li onClick={() => selectLang("HI")}>Hindi</li>
-              <li onClick={() => selectLang("TE")}>Telugu</li>
-            </ul>
-          )}
-        </div>
 
         {user ? (
           <>
