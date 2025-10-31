@@ -1,0 +1,58 @@
+/* === Reset and base styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Body === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #111827;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Root element === */
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Main content === */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* === Links === */
+a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #1e40af;
+}
+
+/* === Headings === */
+h1, h2, h3 {
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+/* === Paragraphs === */
+p {
+  margin-bottom: 1rem;
+}
+
+/* === Utility Container === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}

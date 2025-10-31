@@ -1,0 +1,297 @@
+/* ===== Variables for Theme ===== */
+:root {
+  --primary-color: #f4c430; /* Gold */
+  --primary-hover: #e0b100;
+  --text-light: #333; /* Changed from white to dark gray for readability */
+  --text-dark: #111;
+  --overlay-bg: transparent; /* Removed dark overlay */
+  --card-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  background: url('../assets/legal-img.png') center/cover no-repeat;
+  color: var(--text-light);
+  padding: 100px 20px;
+ background:cornsilk;
+  text-align: center;
+  overflow: visible; /* removed hidden so no clipping */
+}
+
+
+.overlay {
+  display: none; /* Hide overlay to remove dark background */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* no overlay, so z-index can be 1 */
+  max-width: 900px;
+  margin: auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.hero-image {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;        /* Allow it to stretch across the hero */
+}
+
+.hero-image img {
+  width: 80%;         /* Increase width (takes 80% of parent) */
+  max-width: 900px;   /* Prevent it from getting too big */
+  height: 250px;      /* Decrease height (fixed slim look) */
+  object-fit: contain; /* Keeps proportions without distortion */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin: 15px 0 25px;
+  color: var(--text-light);
+  opacity: 0.85;
+}
+
+.features span {
+  margin: 0 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== Call to Action (CTA) ===== */
+.cta {
+  margin-top: 30px;
+  animation: fadeInUp 1.3s ease-out;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.start-btn {
+  background-color: var(--primary-color);
+  color: #000;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.start-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.search-bar {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 220px;
+  max-width: 100%;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(244, 196, 48, 0.35);
+}
+
+/* ===== Divider ===== */
+.divider {
+  margin: 60px auto;
+  border-top: 1px solid #ddd;
+  width: 80%;
+}
+
+/* ===== Audience Section ===== */
+.audience {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.audience-item {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-light);
+  cursor: default;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.audience-item:hover {
+  transform: translateY(-5px);
+  color: var(--primary-color);
+}
+
+.audience-item svg {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+/* ===== Legal Awareness Section ===== */
+.legal-awareness {
+  background:azure;
+  color: var(--text-dark);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.legal-awareness h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.subheading {
+  font-size: 1.15rem;
+  margin-bottom: 40px;
+  color: #666;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+/* ===== Info Cards ===== */
+.info-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.info-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  flex: 1 1 280px;
+  box-shadow: var(--card-shadow);
+  text-align: left;
+  transition: var(--transition);
+  border: 1px solid #eee;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+/* ===== Icon & Badge ===== */
+.icon-badge {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: var(--primary-color);
+  display: inline-block;
+}
+
+.info-badge {
+  background: #f9f9f9;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 12px;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.info-badge:hover {
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+/* ===== Lists ===== */
+.feature-list,
+.audience-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.feature-list li,
+.audience-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333; /* dark text on white background */
+  position: relative;
+  padding-left: 25px;
+  line-height: 1.4;
+}
+
+.feature-list li::before,
+.audience-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .features span {
+    margin: 10px 8px;
+  }
+
+  .cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .info-cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .audience {
+    gap: 25px;
+  }
+}

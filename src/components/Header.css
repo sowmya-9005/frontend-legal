@@ -1,0 +1,177 @@
+/* === HEADER CONTAINER === */
+.header {
+  position: relative; /* Enable absolute positioning inside */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+   background-color: #2f3e53;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* === LEFT SIDE: Logo === */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* === LOGO === */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color:white; /* gray-800 */
+  white-space: nowrap;
+}
+
+.logo-icon {
+  font-size: 24px;
+  margin-right: 8px;
+  color:white; /* blue-500 */
+}
+
+/* === NAV LINKS (centered absolutely) === */
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color:white;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: white;
+}
+
+.nav-links a.active {
+  color:white;       /* default dark color */
+  font-weight: 700;     /* bold */
+}
+
+/* Hover for active link */
+.nav-links a.active:hover {
+  color:white;       /* blue on hover */
+}
+
+/* === RIGHT SIDE: Language + Buttons === */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* === LANGUAGE DROPDOWN CONTAINER === */
+.lang-dropdown {
+  position: relative; /* Keep it relative for the dropdown menu */
+  display: inline-block;
+}
+
+/* === LANGUAGE BUTTON === */
+.lang-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.lang-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* subtle hover effect */
+}
+
+.lang-icon {
+  font-size: 16px;
+}
+
+.dropdown-arrow {
+  margin-left: 4px;
+}
+
+/* === DROPDOWN MENU === */
+.lang-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 130px;
+  z-index: 20;
+}
+
+/* === DROPDOWN ITEMS === */
+.lang-menu li {
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #2f3e53; /* Dark text */
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.lang-menu li:hover {
+  background-color: #2563eb; /* Blue hover */
+  color: white;
+}
+
+
+/* === LOGIN BUTTON === */
+.login-btn {
+  padding: 6px 18px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.login-btn:hover {
+  background-color:white;
+}
+
+/* === SIGNUP BUTTON === */
+.signup-btn {
+  padding: 6px 18px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.signup-btn:hover {
+  background-color:white;
+}
