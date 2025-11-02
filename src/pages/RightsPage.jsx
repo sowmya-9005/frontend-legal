@@ -29,7 +29,7 @@ const RightsPage = () => {
   // Fetch rights from backend
   const fetchRights = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/rights");
+      const res = await axios.get("https://backend-legal.onrender.com/api/rights");
       setRights([...predefinedRights, ...res.data]);
     } catch (err) {
       console.error(err.response?.data || err);
