@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api', // base URL of your backend
+  baseURL: 'https://backend-legal.onrender.com/api', // base URL of your backend
 });
 
 // Add a request interceptor to attach the token automatically
