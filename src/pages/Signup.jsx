@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./Signup.css"; // ✅ same file used for login & signup
 
 const Signup = ({ setUser }) => {
   const [form, setForm] = useState({ name: "", email: "", password: "", role: "" });
@@ -30,30 +31,28 @@ const Signup = ({ setUser }) => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "50px auto" }}>
-      <h2>Sign Up</h2>
-      <form style={{ display: "flex", flexDirection: "column", gap: "10px" }} onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Name" value={form.name} onChange={handleChange} required />
-        <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
-        <input type="password" name="password" placeholder="Password" value={form.password} onChange={handleChange} required />
+    <div className="auth-page">
+      <div className="auth-card">
+        <h2 className="auth-title">Create Account</h2>
 
-        <div>
-          <label>
-            <input type="radio" name="role" value="NGO" checked={form.role === "NGO"} onChange={handleChange} />
-            NGO
-          </label>
-          <label style={{ marginLeft: "10px" }}>
-            <input type="radio" name="role" value="Legal Officer" checked={form.role === "Legal Officer"} onChange={handleChange} />
-            Legal Officer
-          </label>
-          <label style={{ marginLeft: "10px" }}>
-            <input type="radio" name="role" value="Other" checked={form.role === "Other"} onChange={handleChange} />
-            Other
-          </label>
-        </div>
+        <form className="auth-form" onSubmit={handleSubmit}>
+          <input type="text" name="name" placeholder="Full Name" value={form.name} onChange={handleChange} required />
+          <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
+          <input type="password" name="password" placeholder="Password" value={form.password} onChange={handleChange} required />
 
-        <button type="submit" style={{ padding: "10px" }}>Sign Up</button>
-      </form>
+          <div className="role-options">
+            <label><input type="radio" name="role" value="NGO" checked={form.role === "NGO"} onChange={handleChange} /> NGO</label>
+            <label><input type="radio" name="role" value="Legal Officer" checked={form.role === "Legal Officer"} onChange={handleChange} /> Legal Officer</label>
+            <label><input type="radio" name="role" value="Other" checked={form.role === "Other"} onChange={handleChange} /> Other</label>
+          </div>
+
+          <button type="submit" className="auth-btn">Sign Up</button>
+        </form>
+
+        <p className="auth-link">
+          Already have an account? <a href="/login">Login</a>
+        </p>
+      </div>
     </div>
   );
 };
