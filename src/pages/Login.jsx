@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import "./login.css"; // ✅ linked CSS
+import "./Login.css"; // ✅ linked CSS
 
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
